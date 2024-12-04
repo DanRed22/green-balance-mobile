@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Hovered/Pressed State (Darker Color) -->
+    <solid android:color="@color/button_color_pressed"/>
+
+    <corners android:radius="30dp"/>
+
+</shape>
