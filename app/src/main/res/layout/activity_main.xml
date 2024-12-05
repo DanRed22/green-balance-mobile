@@ -5,7 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/button_color"
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -13,7 +15,7 @@
         android:layout_height="153dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="280dp"
-        android:src="@drawable/green_balance_logo_regular"
+        android:src="@drawable/green_balance_logo_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,6 +26,7 @@
         android:layout_marginTop="340dp"
         android:fontFamily="@font/helvetica"
         android:text="Green Balance"
+        android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
