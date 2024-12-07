@@ -3,6 +3,6 @@
     <!-- Normal State (Button Color) -->
     <solid android:color="@color/button_color"/>
 
-    <corners android:radius="30dp"/>
+    <corners android:radius="5dp"/>
 
 </shape>

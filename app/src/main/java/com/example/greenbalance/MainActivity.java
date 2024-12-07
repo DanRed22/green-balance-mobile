@@ -4,12 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.greenbalance.utility.Prefs;
+
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     private static final int SPLASH_SCREEN_TIMEOUT = 2000;
@@ -22,7 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
         Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(() -> {
+            Prefs.init(this);
+           String username = Prefs.getLoginData();
+            if(username != null){
+                Toast.makeText(this, "Welcome back, " + username + "!", Toast.LENGTH_SHORT).show();
+                redirectToDashboard();
+                return;
+            }
             redirectToLogin();
+            return;
+
+
         }, SPLASH_SCREEN_TIMEOUT);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -35,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void redirectToLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void redirectToDashboard(){
+        Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);
         finish();
     }
