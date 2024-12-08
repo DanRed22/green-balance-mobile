@@ -1,0 +1,12 @@
+<!-- res/drawable/rounded_box_with_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Box Layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Box background color -->
+            <stroke android:color="@color/button_color" android:width="4dp"/>
+            <corners android:radius="12dp" /> <!-- Rounded corners for the box -->
+        </shape>
+    </item>
+
+</layer-list>

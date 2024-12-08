@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,227 @@
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_box_with_green_bg"
+        >
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:paddingHorizontal="10dp"
+         android:layout_width="0dp"/>
+
+        <ImageButton
+            android:id="@+id/user_profile_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Redirects to the User Profile"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/user_profile_button_icon_selector"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_box_with_shadow"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHP"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/helvetica_bold"/>
+                <TextView
+                    android:id="@+id/today_expenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textAlignment="center"
+                    android:textColor="#BA0E0E"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="500"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:text="Today's Expenses "/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_bold"/>
+            <TextView
+                android:id="@+id/today_earnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textAlignment="center"
+                android:text="500"
+                android:fontFamily="@font/helvetica_bold"
+                android:textColor="@color/button_color"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:text="Today's Earnings "/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_bold"/>
+            <TextView
+                android:id="@+id/month_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_bold"
+                android:text="PHP 500"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:text="Month's Expenses "/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_bold"/>
+            <TextView
+                android:id="@+id/month_earnings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_bold"
+                android:text="PHP 500"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:text="Month's Earnings "/>
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="10dp"
+            android:gravity="start"
+            android:text="Your Notebooks"
+            android:layout_width="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="10dp"
+        android:id="@+id/notebook_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>
