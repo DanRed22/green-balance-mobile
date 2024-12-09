@@ -26,7 +26,7 @@
         android:paddingEnd="20sp"
         android:paddingBottom="0sp"
         android:text="Lets Get Started!"
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:textSize="40sp" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:paddingEnd="20sp"
         android:paddingBottom="0sp"
         android:text="Let us get to know you."
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -57,7 +57,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/helvetica_bold"
             android:text="Username"
-            android:textColor="@color/button_color"
+            style="@style/TEXT"
             android:textSize="18sp" />
         <EditText
             android:id="@+id/usernameEditText"
@@ -74,7 +74,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/helvetica_bold"
             android:text="Email"
-            android:textColor="@color/button_color"
+            style="@style/TEXT"
             android:layout_marginTop="35dp"
             android:textSize="18sp" />
         <EditText
@@ -93,7 +93,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/helvetica_bold"
             android:text="Password"
-            android:textColor="@color/button_color"
+            style="@style/TEXT"
             android:textSize="18sp" />
         <EditText
             android:id="@+id/passwordEditText"
@@ -116,7 +116,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/helvetica_bold"
             android:text="Confirm Password"
-            android:textColor="@color/button_color"
+            style="@style/TEXT"
             android:textSize="18sp" />
         <EditText
             android:id="@+id/confirmPasswordEditText"
@@ -138,11 +138,10 @@
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/button_bg"
+            style="@style/BUTTON"
             android:clickable="true"
             android:text="Sign Up"
-            android:textColor="@color/white"
-
+            app:cornerRadius="8dp"
             android:textColorLink="@color/white" />
 
         <TextView
@@ -154,13 +153,13 @@
 
         <Button
             android:id="@+id/loginButton"
+            style="@style/BUTTON"
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/button_bg"
             android:clickable="true"
             android:text="Login"
-            android:textColor="@color/white"
+            app:cornerRadius="8dp"
 
             />
 

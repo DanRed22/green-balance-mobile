@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Changes Saved!"
         android:textSize="24sp"
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:gravity="center"
         android:layout_marginBottom="16dp"/>

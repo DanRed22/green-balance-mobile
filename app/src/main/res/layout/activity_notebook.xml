@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -11,27 +12,37 @@
         android:padding="16dp"
         android:background="@drawable/rounded_box_with_green_bg">
 
+        <ImageButton
+            android:id="@+id/ntbkback"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/BACK"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/twotone_arrow_back_24" />
+
         <TextView
             android:id="@+id/notebook_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="24sp"
+            android:fontFamily="@font/helvetica_bold"
             android:textColor="@color/white"
-            android:fontFamily="@font/helvetica_bold"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/add_entry_button"
+            style="@style/BUTTON"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Entry"
-            android:textColor="@color/white"
-            android:background="@drawable/button_bg"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/notebook_menu_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#E6E6E6"
             android:text="⋮"
             android:textSize="20sp" />
     </LinearLayout>
@@ -42,7 +53,7 @@
         android:padding="16dp">
 
         <TableRow
-            android:background="@color/button_color"
+            android:background="#1bc056"
             android:padding="8dp">
 
             <TextView
@@ -51,7 +62,7 @@
                 android:layout_weight="2"
                 android:text="Title"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="0dp"
@@ -59,7 +70,7 @@
                 android:layout_weight="1"
                 android:text="Expense"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="0dp"
@@ -67,7 +78,7 @@
                 android:layout_weight="1"
                 android:text="Gained"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </TableRow>
 
         <androidx.recyclerview.widget.RecyclerView
