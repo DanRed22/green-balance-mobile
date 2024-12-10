@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    style="@style/SCREEN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
@@ -10,8 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white">
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:text="PHP"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
+                    style="@style/DASHTEXT"
                     android:fontFamily="@font/helvetica_bold"/>
                 <TextView
                     android:id="@+id/today_expenses"
@@ -98,7 +98,8 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:textAlignment="center"
-                android:text="Today's Expenses "/>
+                android:text="Today's Expenses"
+                style="@style/DASHTEXT" />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
@@ -113,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:text="PHP"
                 android:textSize="14sp"
-                android:textColor="@color/black"
+                style="@style/DASHTEXT"
                 android:fontFamily="@font/helvetica_bold"/>
             <TextView
                 android:id="@+id/today_earnings"
@@ -130,7 +131,8 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:textAlignment="center"
-                android:text="Today's Earnings "/>
+                android:text="Today's Earnings"
+                style="@style/DASHTEXT" />
         </LinearLayout>
 
     </LinearLayout>
@@ -155,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:text="PHP"
                 android:textSize="14sp"
-                android:textColor="@color/black"
+                style="@style/DASHTEXT"
                 android:fontFamily="@font/helvetica_bold"/>
             <TextView
                 android:id="@+id/month_expenses"
@@ -163,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="26sp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                style="@style/DASHTEXT"
                 android:fontFamily="@font/helvetica_bold"
                 android:text="PHP 500"/>
             <TextView
@@ -172,7 +174,8 @@
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:textAlignment="center"
-                android:text="Month's Expenses "/>
+                android:text="Month's Expenses"
+                style="@style/DASHTEXT" />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
@@ -187,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:text="PHP"
                 android:textSize="14sp"
-                android:textColor="@color/black"
+                style="@style/DASHTEXT"
                 android:fontFamily="@font/helvetica_bold"/>
             <TextView
                 android:id="@+id/month_earnings"
@@ -195,16 +198,17 @@
                 android:layout_height="wrap_content"
                 android:textSize="26sp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                style="@style/DASHTEXT"
                 android:fontFamily="@font/helvetica_bold"
-                android:text="PHP 500"/>
+                android:text="PHP 500" />
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:textAlignment="center"
-                android:text="Month's Earnings "/>
+                android:text="Month's Earnings"
+                style="@style/DASHTEXT" />
         </LinearLayout>
 
     </LinearLayout>
@@ -217,7 +221,7 @@
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="26sp"
-            android:textColor="@color/black"
+            style="@style/TEXT"
             android:paddingHorizontal="10dp"
             android:gravity="start"
             android:text="Your Notebooks"

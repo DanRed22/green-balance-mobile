@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "909790014626",
+    "project_id": "loginjuinio",
+    "storage_bucket": "loginjuinio.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909790014626:android:963739b988d7a373e8fbfb",
+        "android_client_info": {
+          "package_name": "com.example.greenbalance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDglCS7Sd6l2RWj5UdNHX4DT6rbNN6ciPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909790014626:android:f04ad0a4e9e91e70e8fbfb",
+        "android_client_info": {
+          "package_name": "com.oct4l.shopphile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDglCS7Sd6l2RWj5UdNHX4DT6rbNN6ciPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909790014626:android:3bf3faf6844b53e5e8fbfb",
+        "android_client_info": {
+          "package_name": "ph.edu.usc18103280.juinio_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDglCS7Sd6l2RWj5UdNHX4DT6rbNN6ciPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

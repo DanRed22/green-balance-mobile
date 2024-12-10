@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -28,7 +29,8 @@ import java.util.concurrent.CompletableFuture;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button loginButton, signUpButton;
+    Button loginButton;
+    TextView signUpTextView;
     EditText email, password;
     FirebaseAuth firebaseAuth;
     private static final String TAG = "LoginActivity";
@@ -50,15 +52,22 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.emailEditText);
         password = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
-        signUpButton = findViewById(R.id.signUpButton);
-        signUpButton.setClickable(true);
+        signUpTextView = findViewById(R.id.signUpTextView);
+        signUpTextView.setClickable(true);
         loginButton.setClickable(true);
 
-        signUpButton.setOnClickListener(v->{
-            Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-            startActivity(intent);
-            finish();
+        signUpTextView.setOnClickListener(v -> {
+            signUpTextView.setTextColor(getResources().getColor(R.color.button_color_pressed));
+
+            Intent signUpIntent = new Intent(getApplicationContext(), SignUpActivity.class);
+            startActivity(signUpIntent);
+
+            signUpTextView.postDelayed(() ->
+                            signUpTextView.setTextColor(getResources().getColor(R.color.dialog_button_color)),
+                    200
+            );
         });
+
         loginButton.setOnClickListener(v -> {
             if (validateInputs()) {
                 firebaseAuth.signInWithEmailAndPassword(
@@ -127,7 +136,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /* Saves login data so user wont have to keep relogging-in
-    * Parameters would be the whole data token returned by the user login.
-    * */
+     * Parameters would be the whole data token returned by the user login.
+     * */
 
 }

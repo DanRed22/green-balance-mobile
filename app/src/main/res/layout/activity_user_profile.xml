@@ -12,12 +12,21 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="24dp">
+
+    <ImageButton
+        android:id="@+id/profileback"
+        android:layout_width="20dp"
+        android:layout_height="50dp"
+        style="@style/BACK"
+        android:background="#00000000"
+        app:srcCompat="@drawable/twotone_arrow_back_24" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Profile Settings"
         android:textSize="32sp"
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:layout_marginBottom="32dp"/>
 
@@ -25,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Username"
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
@@ -41,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
@@ -58,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Password"
-        android:textColor="@color/button_color"
+        style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
@@ -76,7 +85,8 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="Save Changes"
-        android:background="@drawable/button_bg"
+        style="@style/BUTTON"
+        app:cornerRadius="8dp"
         android:textColor="@color/white"
         android:layout_marginBottom="16dp"/>
 
@@ -85,7 +95,8 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="Logout"
-        android:background="@drawable/button_bg"
+        style="@style/BUTTON"
+        app:cornerRadius="8dp"
         android:textColor="@color/white"/>
 </LinearLayout>
 </LinearLayout>
