@@ -6,9 +6,14 @@ import static com.example.greenbalance.utility.Prefs.saveLoginData;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -28,9 +33,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button loginButton, signUpButton;
+    Button loginButton;
+    TextView signUpTextView;
     EditText email, password;
     FirebaseAuth firebaseAuth;
+    ImageView eyeIcon;
     private static final String TAG = "LoginActivity";
     private String uid, userEmail;
 
@@ -50,15 +57,25 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.emailEditText);
         password = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
-        signUpButton = findViewById(R.id.signUpButton);
-        signUpButton.setClickable(true);
+        signUpTextView = findViewById(R.id.signUpTextView);
+        signUpTextView.setClickable(true);
         loginButton.setClickable(true);
+        eyeIcon = findViewById(R.id.eyeIcon);
 
-        signUpButton.setOnClickListener(v->{
-            Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-            startActivity(intent);
-            finish();
+        eyeIcon.setOnClickListener(v -> togglePasswordVisibility(password, eyeIcon));
+
+        signUpTextView.setOnClickListener(v -> {
+            signUpTextView.setTextColor(getResources().getColor(R.color.button_color_pressed));
+
+            Intent signUpIntent = new Intent(getApplicationContext(), SignUpActivity.class);
+            startActivity(signUpIntent);
+
+            signUpTextView.postDelayed(() ->
+                            signUpTextView.setTextColor(getResources().getColor(R.color.dialog_button_color)),
+                    200
+            );
         });
+
         loginButton.setOnClickListener(v -> {
             if (validateInputs()) {
                 firebaseAuth.signInWithEmailAndPassword(
@@ -127,7 +144,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /* Saves login data so user wont have to keep relogging-in
-    * Parameters would be the whole data token returned by the user login.
-    * */
+     * Parameters would be the whole data token returned by the user login.
+     * */
+
+    private void togglePasswordVisibility(EditText passwordField, ImageView toggleButton) {
+        if (passwordField.getTransformationMethod() instanceof PasswordTransformationMethod) {
+            passwordField.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.visibility_24dp_e8eaed_fill0_wght400_grad0_opsz24);
+        } else {
+            passwordField.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.visibility_off_24dp_e8eaed_fill0_wght400_grad0_opsz24);
+        }
+
+        passwordField.setSelection(passwordField.getText().length());
+    }
 
 }

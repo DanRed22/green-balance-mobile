@@ -1,7 +1,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GreenBalance" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<!--    <style name="Base.Theme.GreenBalance" parent="Theme.Material3.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your dark theme here. &ndash;&gt;-->
+<!--        &lt;!&ndash; <item name="colorPrimary">@color/my_dark_primary</item> &ndash;&gt;-->
+<!--    </style>-->
+
+    <!-- Juinio UI Changes-->
+
+    <style name="TEXT">
+        <item name="android:textColor">#1bc056</item>
+    </style>
+
+    <style name="DASHTEXT">
+        <item name="android:textColor">#E6E6E6</item>
+    </style>
+
+    <style name="SCREEN">
+        <item name="android:background">#121212</item>
+    </style>
+
+    <style name="BUTTON">
+        <item name="android:textColor">#E6E6E6</item>
+        <item name="android:backgroundTint">#1bc056</item>
+    </style>
+
+    <style name="CARDBG">
+        <item name="android:background">#3D838383</item>
     </style>
 </resources>

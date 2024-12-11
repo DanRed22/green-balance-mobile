@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private TextView emailTextView;
     private Button saveButton, logoutButton;
     private FirebaseAuth firebaseAuth;
+    private ImageButton profileBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,15 @@ public class UserProfileActivity extends AppCompatActivity {
         newPasswordEditText = findViewById(R.id.newPasswordEditText);
         saveButton = findViewById(R.id.saveButton);
         logoutButton = findViewById(R.id.logoutButton);
+        profileBack = findViewById(R.id.profileback);
+
+        profileBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dashboard = new Intent(UserProfileActivity.this, DashboardActivity.class);
+                startActivity(dashboard);
+            }
+        });
 
         // Load current user data
         loadUserData();

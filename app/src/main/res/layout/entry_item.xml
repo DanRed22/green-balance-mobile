@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="8dp"
-    android:background="?android:attr/selectableItemBackground">
+    style="@style/CARDBG">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -14,16 +14,16 @@
 
         <TextView
             android:id="@+id/entry_title"
+            style="@style/TEXT"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/entry_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="@android:color/darker_gray"/>
+            style="@style/TEXT"/>
     </LinearLayout>
 
     <TextView

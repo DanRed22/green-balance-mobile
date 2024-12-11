@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,10 @@ public class NotebookActivity extends AppCompatActivity {
 
         Button notebookMenuButton = findViewById(R.id.notebook_menu_button);
         notebookMenuButton.setOnClickListener(v -> showNotebookMenu());
+
+        ImageButton ntbkBack = findViewById(R.id.ntbkback);
+
+        ntbkBack.setOnClickListener(v -> finish());
 
         setupRecyclerView();
         fetchEntries();

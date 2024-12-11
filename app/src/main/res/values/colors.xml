@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="button_color">#09522D</color>
     <color name="button_color_pressed">#032E17</color>
+    <color name="dialog_button_color">#1bc056</color>
 
 </resources>
