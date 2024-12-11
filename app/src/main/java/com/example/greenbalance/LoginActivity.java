@@ -6,9 +6,13 @@ import static com.example.greenbalance.utility.Prefs.saveLoginData;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView signUpTextView;
     EditText email, password;
     FirebaseAuth firebaseAuth;
+    ImageView eyeIcon;
     private static final String TAG = "LoginActivity";
     private String uid, userEmail;
 
@@ -55,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
         signUpTextView = findViewById(R.id.signUpTextView);
         signUpTextView.setClickable(true);
         loginButton.setClickable(true);
+        eyeIcon = findViewById(R.id.eyeIcon);
+
+        eyeIcon.setOnClickListener(v -> togglePasswordVisibility(password, eyeIcon));
 
         signUpTextView.setOnClickListener(v -> {
             signUpTextView.setTextColor(getResources().getColor(R.color.button_color_pressed));
@@ -138,5 +146,17 @@ public class LoginActivity extends AppCompatActivity {
     /* Saves login data so user wont have to keep relogging-in
      * Parameters would be the whole data token returned by the user login.
      * */
+
+    private void togglePasswordVisibility(EditText passwordField, ImageView toggleButton) {
+        if (passwordField.getTransformationMethod() instanceof PasswordTransformationMethod) {
+            passwordField.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.visibility_24dp_e8eaed_fill0_wght400_grad0_opsz24);
+        } else {
+            passwordField.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.visibility_off_24dp_e8eaed_fill0_wght400_grad0_opsz24);
+        }
+
+        passwordField.setSelection(passwordField.getText().length());
+    }
 
 }

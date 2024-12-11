@@ -1,237 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:id="@+id/main"
     style="@style/SCREEN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#1bc056"
     tools:context=".DashboardActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/rounded_box_with_green_bg"
-        >
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_weight="3"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/helvetica_bold"
-        android:textSize="32sp"
-        android:textColor="@color/white"
-        android:paddingHorizontal="10dp"
-         android:layout_width="0dp"/>
 
-        <ImageButton
-            android:id="@+id/user_profile_button"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="Redirects to the User Profile"
-            android:layout_height="60dp"
-            android:scaleType="fitCenter"
-            android:background="@null"
-            android:src="@drawable/user_profile_button_icon_selector"
-            />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_box_with_shadow"
-        >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:gravity="center"
-        >
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PHP"
-                    android:textSize="14sp"
-                    style="@style/DASHTEXT"
-                    android:fontFamily="@font/helvetica_bold"/>
-                <TextView
-                    android:id="@+id/today_expenses"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="26sp"
-                    android:textAlignment="center"
-                    android:textColor="#BA0E0E"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="500"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Today's Expenses"
-                style="@style/DASHTEXT" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PHP"
-                android:textSize="14sp"
-                style="@style/DASHTEXT"
-                android:fontFamily="@font/helvetica_bold"/>
-            <TextView
-                android:id="@+id/today_earnings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                android:text="500"
-                android:fontFamily="@font/helvetica_bold"
-                android:textColor="@color/button_color"/>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Today's Earnings"
-                style="@style/DASHTEXT" />
-        </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:gravity="center"
-        >
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PHP"
-                android:textSize="14sp"
-                style="@style/DASHTEXT"
-                android:fontFamily="@font/helvetica_bold"/>
-            <TextView
-                android:id="@+id/month_expenses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                style="@style/DASHTEXT"
-                android:fontFamily="@font/helvetica_bold"
-                android:text="PHP 500"/>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Month's Expenses"
-                style="@style/DASHTEXT" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PHP"
-                android:textSize="14sp"
-                style="@style/DASHTEXT"
-                android:fontFamily="@font/helvetica_bold"/>
-            <TextView
-                android:id="@+id/month_earnings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                style="@style/DASHTEXT"
-                android:fontFamily="@font/helvetica_bold"
-                android:text="PHP 500" />
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Month's Earnings"
-                style="@style/DASHTEXT" />
-        </LinearLayout>
-
-    </LinearLayout>
-    </LinearLayout>
-        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="127dp">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="3"
+                android:text="test"
+                android:fontFamily="@font/helvetica_bold"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <ImageButton
+                android:id="@+id/user_profile_button"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Redirects to the User Profile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user_profile_button_icon_selector" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/BottomPanel"
+            android:layout_width="412dp"
+            android:layout_height="626dp"
+            app:cardCornerRadius="15dp"
+            android:background="?attr/colorSurface"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="220dp">
+
+            <ImageView
+                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_from_rawpixel_id_16443032_png"
+                app:tint="#1BC056"
+                tools:ignore="MissingConstraints" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:layout_marginTop="310dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/TEXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="Your Notebooks"
+                    android:textSize="26sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notebook_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:padding="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="382dp"
+            android:layout_height="345dp"
+            android:orientation="vertical"
+            android:outlineAmbientShadowColor="@color/black"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="25dp"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="200dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="171dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start|bottom"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#C3FED6"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="PHP"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/month_expenses"
+                    style="@style/DASHTEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="PHP 500"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Month's Expenses"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="171dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#C3FED6"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="PHP"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/month_earnings"
+                    style="@style/DASHTEXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="PHP 500"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Month's Earnings"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/DASHTEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/today_expenses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textColor="#BA0E0E"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Today's Expenses"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="PHP"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/today_earnings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="500"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_color"
+                    android:textSize="26sp" />
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Today's Earnings"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/dashboardtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/helvetica_bold"
-            android:textSize="26sp"
-            style="@style/TEXT"
             android:paddingHorizontal="10dp"
-            android:gravity="start"
-            android:text="Your Notebooks"
-            android:layout_width="match_parent"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:padding="10dp"
-        android:id="@+id/notebook_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="280dp"
-        >
-    </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
+            android:text="Dashboard"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="82dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

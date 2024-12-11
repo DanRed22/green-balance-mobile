@@ -4,10 +4,16 @@ import static com.example.greenbalance.utility.User.createUserAccount;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.text.method.PasswordTransformationMethod;
+import android.text.method.HideReturnsTransformationMethod;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +30,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    Button signUpButton, loginButton;
+    Button signUpButton;
+    ImageButton backButton;
+    ImageView eyeIcon, eyeIcon2;
     EditText username, email, password, confirmPassword;
+    TextView loginTextView;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -41,14 +50,29 @@ public class SignUpActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         signUpButton = findViewById(R.id.signUpButton);
-        loginButton = findViewById(R.id.loginButton);
+        backButton = findViewById(R.id.backBtn);
+        loginTextView = findViewById(R.id.loginTextView);
         username = findViewById(R.id.usernameEditText);
         email = findViewById(R.id.emailEditText);
         password = findViewById(R.id.passwordEditText);
         confirmPassword = findViewById(R.id.confirmPasswordEditText);
+        eyeIcon = findViewById(R.id.eyeIcon);
+        eyeIcon2 = findViewById(R.id.eyeIcon2);
+        loginTextView.setClickable(true);
 
-        loginButton.setOnClickListener(
+        eyeIcon.setOnClickListener(v -> togglePasswordVisibility(password, eyeIcon));
+        eyeIcon2.setOnClickListener(v -> togglePasswordVisibility(confirmPassword, eyeIcon2));
+
+        backButton.setOnClickListener(
                 v->{
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(intent);
+                }
+        );
+        loginTextView.setOnClickListener(
+                v->{
+                    loginTextView.setTextColor(getResources().getColor(R.color.button_color_pressed));
+
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
                     finish();
@@ -132,5 +156,17 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    private void togglePasswordVisibility(EditText passwordField, ImageView toggleButton) {
+        if (passwordField.getTransformationMethod() instanceof PasswordTransformationMethod) {
+            passwordField.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.visibility_24dp_e8eaed_fill0_wght400_grad0_opsz24);
+        } else {
+            passwordField.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            toggleButton.setImageResource(R.drawable.visibility_off_24dp_e8eaed_fill0_wght400_grad0_opsz24);
+        }
+
+        passwordField.setSelection(passwordField.getText().length());
     }
 }
