@@ -1,233 +1,438 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:id="@+id/main"
+    style="@style/SCREEN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#1bc056"
     tools:context=".DashboardActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/rounded_box_with_green_bg"
-        >
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_weight="3"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/helvetica_bold"
-        android:textSize="32sp"
-        android:textColor="@color/white"
-        android:paddingHorizontal="10dp"
-         android:layout_width="0dp"/>
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/user_profile_button"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="Redirects to the User Profile"
-            android:layout_height="60dp"
-            android:scaleType="fitCenter"
-            android:background="@null"
-            android:src="@drawable/user_profile_button_icon_selector"
-            />
-    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/TopPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_box_with_shadow"
-        >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:gravity="center"
-        >
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <LinearLayout
+            <ImageView
+                android:id="@+id/background_image3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PHP"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/helvetica_bold"/>
-                <TextView
-                    android:id="@+id/today_expenses"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="26sp"
-                    android:textAlignment="center"
-                    android:textColor="#BA0E0E"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="500"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Today's Expenses "/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PHP"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/helvetica_bold"/>
-            <TextView
-                android:id="@+id/today_earnings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                android:text="500"
-                android:fontFamily="@font/helvetica_bold"
-                android:textColor="@color/button_color"/>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Today's Earnings "/>
-        </LinearLayout>
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/gradientpatternproper"
+                android:tint="#991BC056"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints,UseAppTint" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        android:gravity="center"
-        >
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PHP"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/helvetica_bold"/>
-            <TextView
-                android:id="@+id/month_expenses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:fontFamily="@font/helvetica_bold"
-                android:text="PHP 500"/>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Month's Expenses "/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PHP"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/helvetica_bold"/>
-            <TextView
-                android:id="@+id/month_earnings"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:fontFamily="@font/helvetica_bold"
-                android:text="PHP 500"/>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:text="Month's Earnings "/>
-        </LinearLayout>
+                android:layout_height="130dp"
+                android:layout_marginTop="80dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background_image3"
+                tools:ignore="MissingConstraints">
 
-    </LinearLayout>
-    </LinearLayout>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+                <TextView
+                    android:id="@+id/dashboardtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="Dashboard"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    android:layout_width="142dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="test"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dashboardtext"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/user_profile_button"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="173dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Redirects to the User Profile"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/user_profile_button_icon_selector"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/welcome_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MiddlePanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/SCREEN"
+            app:layout_constraintTop_toBottomOf="@id/TopPanel">
+
+            <ImageView
+                android:id="@+id/background_image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/dotpattern"
+                app:tint="#1bc056"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/BottomPanel"
+            style="@style/SCREEN"
+            android:layout_width="412dp"
+            android:layout_height="385dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toBottomOf="@id/MiddlePanel"
+            tools:ignore="MissingConstraints">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:layout_marginTop="34dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TEXT"
+                    android:layout_width="382dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="Your Notebooks"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notebook_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:layout_editor_absoluteX="20dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CARDBG"
+            android:layout_width="382dp"
+            android:layout_height="345dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:fontFamily="@font/helvetica_bold"
-            android:textSize="26sp"
-            android:textColor="@color/black"
-            android:paddingHorizontal="10dp"
-            android:gravity="start"
-            android:text="Your Notebooks"
-            android:layout_width="match_parent"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:padding="10dp"
-        android:id="@+id/notebook_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="280dp"
-        >
-    </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
+            android:orientation="vertical"
+            android:outlineAmbientShadowColor="@color/black"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/MiddlePanel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TopPanel"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/month_expenses_card"
+                style="@style/CARDBG2"
+                android:layout_width="171dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start|bottom"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="Month's Expenses"
+                    android:textAlignment="center"
+                    android:textColor="#1bc056"
+                    android:textSize="12sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/month_expenses"
+                        style="@style/DASHTEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/month_earnings_card"
+                style="@style/CARDBG2"
+                android:layout_width="171dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/month_earnings"
+                        style="@style/DASHTEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="Month's Earnings"
+                    android:textAlignment="center"
+                    android:textColor="#1bc056"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/today_expenses_card"
+                style="@style/CARDBG2"
+                android:layout_width="171dp"
+                android:layout_height="150dp"
+                android:layout_gravity="top"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/today_expenses"
+                        android:layout_width="63dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textColor="#BA0E0E"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="118dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="Today's Expenses"
+                    android:textAlignment="center"
+                    android:textColor="#1bc056"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/today_earnings_card"
+                style="@style/CARDBG2"
+                android:layout_width="171dp"
+                android:layout_height="150dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/today_earnings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textColor="@color/button_color"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.507"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/DASHTEXT"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="Today's Earnings"
+                    android:textAlignment="center"
+                    android:textColor="#1bc056"
+                    android:textSize="12sp" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
