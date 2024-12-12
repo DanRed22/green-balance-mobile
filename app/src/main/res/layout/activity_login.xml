@@ -46,6 +46,7 @@
             android:background="@drawable/text_input_outline"
             android:hint="Enter Email"
             android:paddingHorizontal="10sp" />
+
         <RelativeLayout
             android:layout_width="350dp"
             android:layout_height="48dp"
@@ -77,17 +78,17 @@
 
         </RelativeLayout>
 
-            <Button
-                android:id="@+id/loginButton"
-                style="@style/BUTTON"
-                android:layout_width="350dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="center_horizontal"
-                android:clickable="true"
-                android:text="Login"
-                android:textAlignment="center"
-                app:cornerRadius="8dp" />
+        <Button
+            android:id="@+id/loginButton"
+            style="@style/BUTTON"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:text="Login"
+            android:textAlignment="center"
+            app:cornerRadius="8dp" />
 
 
         <LinearLayout

@@ -11,284 +11,428 @@
     tools:context=".DashboardActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/TopPanel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="127dp">
-
-            <TextView
-                android:id="@+id/welcome_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="3"
-                android:text="test"
-                android:fontFamily="@font/helvetica_bold"
-                android:paddingHorizontal="10dp"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
-
-            <ImageButton
-                android:id="@+id/user_profile_button"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginEnd="16dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:contentDescription="Redirects to the User Profile"
-                android:scaleType="fitCenter"
-                android:src="@drawable/user_profile_button_icon_selector" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/BottomPanel"
-            android:layout_width="412dp"
-            android:layout_height="626dp"
-            app:cardCornerRadius="15dp"
-            android:background="?attr/colorSurface"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-1dp"
-            tools:layout_editor_absoluteY="220dp">
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/background_image"
+                android:id="@+id/background_image3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/image_from_rawpixel_id_16443032_png"
-                app:tint="#1BC056"
-                tools:ignore="MissingConstraints" />
+                android:src="@drawable/gradientpatternproper"
+                android:tint="#991BC056"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints,UseAppTint" />
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="325dp"
-                android:layout_marginTop="310dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="top"
+                android:layout_height="130dp"
+                android:layout_marginTop="80dp"
                 android:orientation="horizontal"
-                android:padding="20dp">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background_image3"
+                tools:ignore="MissingConstraints">
 
                 <TextView
-                    style="@style/TEXT"
-                    android:layout_width="match_parent"
+                    android:id="@+id/dashboardtext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="Dashboard"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    android:layout_width="142dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="test"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dashboardtext"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/user_profile_button"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="173dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Redirects to the User Profile"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/user_profile_button_icon_selector"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/welcome_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MiddlePanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/SCREEN"
+            app:layout_constraintTop_toBottomOf="@id/TopPanel">
+
+            <ImageView
+                android:id="@+id/background_image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/dotpattern"
+                app:tint="#1bc056"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/BottomPanel"
+            style="@style/SCREEN"
+            android:layout_width="412dp"
+            android:layout_height="385dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toBottomOf="@id/MiddlePanel"
+            tools:ignore="MissingConstraints">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:layout_marginTop="34dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TEXT"
+                    android:layout_width="382dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
                     android:fontFamily="@font/helvetica_bold"
                     android:paddingHorizontal="10dp"
                     android:text="Your Notebooks"
-                    android:textSize="26sp" />
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/notebook_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:padding="10dp"></androidx.recyclerview.widget.RecyclerView>
+                    android:layout_marginTop="17dp"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:layout_editor_absoluteX="20dp">
 
-            </RelativeLayout>
+                </androidx.recyclerview.widget.RecyclerView>
 
-        </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
+            style="@style/CARDBG"
             android:layout_width="382dp"
             android:layout_height="345dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical"
             android:outlineAmbientShadowColor="@color/black"
-            app:cardBackgroundColor="?attr/colorSurface"
             app:cardCornerRadius="25dp"
-            tools:layout_editor_absoluteX="14dp"
-            tools:layout_editor_absoluteY="200dp"
+            app:cardElevation="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/MiddlePanel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TopPanel"
             tools:ignore="MissingConstraints">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/month_expenses_card"
+                style="@style/CARDBG2"
                 android:layout_width="171dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_alignParentStart="true"
                 android:layout_gravity="start|bottom"
                 android:layout_margin="15dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                app:cardBackgroundColor="#C3FED6"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
 
                 <TextView
                     style="@style/DASHTEXT"
-                    android:layout_width="wrap_content"
+                    android:layout_width="128dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="PHP"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/month_expenses"
-                    style="@style/DASHTEXT"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="PHP 500"
-                    android:textAlignment="center"
-                    android:textSize="26sp" />
-
-                <TextView
-                    style="@style/DASHTEXT"
-                    android:layout_width="100dp"
-                    android:layout_height="0dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
                     android:text="Month's Expenses"
                     android:textAlignment="center"
+                    android:textColor="#1bc056"
                     android:textSize="12sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/month_expenses"
+                        style="@style/DASHTEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+                android:id="@+id/month_earnings_card"
+                style="@style/CARDBG2"
                 android:layout_width="171dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_alignParentEnd="true"
                 android:layout_gravity="end|bottom"
                 android:layout_margin="15dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                app:cardBackgroundColor="#C3FED6"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
 
-                <TextView
-                    style="@style/DASHTEXT"
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="PHP"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/month_earnings"
-                    style="@style/DASHTEXT"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="PHP 500"
-                    android:textAlignment="center"
-                    android:textSize="26sp" />
-
-                <TextView
-                    style="@style/DASHTEXT"
-                    android:layout_width="100dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Month's Earnings"
-                    android:textAlignment="center"
-                    android:textSize="12sp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="350dp"
-                android:layout_height="100dp"
-                android:layout_gravity="top"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="15dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/textView5"
                         style="@style/DASHTEXT"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
                         android:fontFamily="@font/helvetica_bold"
                         android:text="PHP"
-                        android:textSize="14sp" />
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/today_expenses"
+                        android:id="@+id/month_earnings"
+                        style="@style/DASHTEXT"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/helvetica_bold"
                         android:text="500"
                         android:textAlignment="center"
-                        android:textColor="#BA0E0E"
-                        android:textSize="26sp" />
-                </LinearLayout>
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     style="@style/DASHTEXT"
-                    android:layout_width="100dp"
+                    android:layout_width="129dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Today's Expenses"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="Month's Earnings"
                     android:textAlignment="center"
+                    android:textColor="#1bc056"
                     android:textSize="12sp" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="350dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
+                android:id="@+id/today_expenses_card"
+                style="@style/CARDBG2"
+                android:layout_width="171dp"
+                android:layout_height="150dp"
+                android:layout_gravity="top"
                 android:layout_margin="15dp"
-                android:layout_weight="1"
                 android:orientation="vertical"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/today_expenses"
+                        android:layout_width="63dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textColor="#BA0E0E"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     style="@style/DASHTEXT"
-                    android:layout_width="wrap_content"
+                    android:layout_width="118dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
                     android:fontFamily="@font/helvetica_bold"
-                    android:text="PHP"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/today_earnings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvetica_bold"
-                    android:text="500"
+                    android:text="Today's Expenses"
                     android:textAlignment="center"
-                    android:textColor="@color/button_color"
-                    android:textSize="26sp" />
+                    android:textColor="#1bc056"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/today_earnings_card"
+                style="@style/CARDBG2"
+                android:layout_width="171dp"
+                android:layout_height="150dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="1.1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/DASHTEXT"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="PHP"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/today_earnings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="500"
+                        android:textAlignment="center"
+                        android:textColor="@color/button_color"
+                        android:textSize="26sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.507"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     style="@style/DASHTEXT"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
                     android:text="Today's Earnings"
                     android:textAlignment="center"
+                    android:textColor="#1bc056"
                     android:textSize="12sp" />
+
             </androidx.cardview.widget.CardView>
-
-
         </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/dashboardtext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/helvetica_bold"
-            android:paddingHorizontal="10dp"
-            android:text="Dashboard"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="82dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

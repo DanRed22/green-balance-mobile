@@ -25,7 +25,11 @@
     </style>
 
     <style name="CARDBG">
-        <item name="android:background">#3D838383</item>
+        <item name="android:backgroundTint">#EDEDED</item>
+    </style>
+
+    <style name="CARDBG2">
+        <item name="android:backgroundTint">#F4F4F4</item>
     </style>
 
     <style name="BACK">

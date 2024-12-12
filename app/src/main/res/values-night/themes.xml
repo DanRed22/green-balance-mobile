@@ -21,10 +21,16 @@
 
     <style name="BUTTON">
         <item name="android:textColor">#E6E6E6</item>
-        <item name="android:backgroundTint">#1bc056</item>
+        <item name="android:backgroundTint">#1bc056</item>s
     </style>
 
     <style name="CARDBG">
-        <item name="android:background">#3D838383</item>
+        <item name="android:backgroundTint">#22222A</item>
     </style>
+
+    <style name="CARDBG2">
+        <item name="android:backgroundTint">#26262C</item>
+    </style>
+
+
 </resources>
