@@ -11,33 +11,42 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:layout_gravity="center">
 
     <ImageButton
         android:id="@+id/profileback"
-        android:layout_width="20dp"
-        android:layout_height="50dp"
-        style="@style/BACK"
-        android:background="#00000000"
-        app:srcCompat="@drawable/twotone_arrow_back_24" />
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow_back_ios_new_40dp_e8eaed_fill0_wght400_grad0_opsz40"
+        app:tint="#1bc056"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profile Settings"
-        android:textSize="32sp"
         style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/helvetica_bold"
-        android:layout_marginBottom="32dp"/>
+        android:text="Profile Settings"
+        android:textSize="20sp" />
 
     <TextView
         style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/helvetica_bold"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
         android:text="Username"
-        android:layout_marginBottom="10dp"
-        android:textSize="18sp" />
+        android:layout_marginBottom="5dp"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/usernameEditText"
@@ -53,10 +62,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
         style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
-        android:textSize="18sp"
-        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
 
 />
 
@@ -74,32 +85,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Password"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
         style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
-        android:textSize="18sp"
-        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
 />
 
-    <EditText
-        android:id="@+id/newPasswordEditText"
+    <RelativeLayout
         android:layout_width="350dp"
         android:layout_height="48dp"
-        android:hint="Enter password"
-        android:inputType="textPassword"
-        android:paddingLeft="10dp"
-        android:paddingRight="40dp"
-        android:layout_marginBottom="10dp"
         android:layout_gravity="center"
-        android:background="@drawable/text_input_outline"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        android:importantForAccessibility="yes"/>
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/newPasswordEditText"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:hint="Enter New Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/text_input_outline"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:importantForAccessibility="yes"/>
+
+        <ImageView
+            android:id="@+id/eyeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/visibility_off_24dp_e8eaed_fill0_wght400_grad0_opsz24"
+            app:tint="#838383" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp">
+
+        <EditText
+            android:id="@+id/newPasswordConfrmEditText"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:hint="Confirm New Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/text_input_outline"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:importantForAccessibility="yes"/>
+
+        <ImageView
+            android:id="@+id/eyeIcon2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/visibility_off_24dp_e8eaed_fill0_wght400_grad0_opsz24"
+            app:tint="#838383" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:text="Save Profile"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
         style="@style/BUTTON"
         app:cornerRadius="8dp"
         android:textColor="@color/white"
@@ -110,6 +174,20 @@
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:text="Edit Profile"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        style="@style/GRYBUTTON"
+        app:cornerRadius="8dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:text="Cancel Edit Profile"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
         style="@style/GRYBUTTON"
         app:cornerRadius="8dp"
         android:textColor="@color/white"
@@ -120,6 +198,8 @@
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:text="Logout"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
         style="@style/REDBUTTON"
         app:cornerRadius="8dp"
         android:textColor="@color/white"/>

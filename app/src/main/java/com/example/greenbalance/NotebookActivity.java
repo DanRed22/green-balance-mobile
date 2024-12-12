@@ -65,7 +65,7 @@ public class NotebookActivity extends AppCompatActivity {
         Button addEntryButton = findViewById(R.id.add_entry_button);
         addEntryButton.setOnClickListener(v -> showEntryDialog(null));
 
-        Button notebookMenuButton = findViewById(R.id.notebook_menu_button);
+        ImageButton notebookMenuButton = findViewById(R.id.notebook_menu_button);
         notebookMenuButton.setOnClickListener(v -> showNotebookMenu());
 
         ImageButton ntbkBack = findViewById(R.id.ntbkback);
