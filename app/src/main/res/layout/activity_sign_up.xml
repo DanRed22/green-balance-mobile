@@ -28,7 +28,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/arrow_back_ios_new_40dp_e8eaed_fill0_wght400_grad0_opsz40"
             app:tint="#1bc056"
-            tools:ignore="SpeakableTextPresentCheck">
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
         </ImageButton>
 

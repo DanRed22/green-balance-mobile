@@ -24,6 +24,16 @@
         <item name="android:backgroundTint">#1bc056</item>
     </style>
 
+    <style name="REDBUTTON">
+        <item name="android:textColor">#E6E6E6</item>
+        <item name="android:backgroundTint">#d42828</item>
+    </style>
+
+    <style name="GRYBUTTON">
+        <item name="android:textColor">#E6E6E6</item>
+        <item name="android:backgroundTint">#787878</item>
+    </style>
+
     <style name="CARDBG">
         <item name="android:backgroundTint">#EDEDED</item>
     </style>

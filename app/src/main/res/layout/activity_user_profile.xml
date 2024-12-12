@@ -31,20 +31,23 @@
         android:layout_marginBottom="32dp"/>
 
     <TextView
+        style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
-        style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:text="Username"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/usernameEditText"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="48dp"
+        android:hint="Enter Username"
+        android:paddingHorizontal="10sp"
+        android:layout_gravity="center"
         android:background="@drawable/text_input_outline"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,15 +56,19 @@
         style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="10dp"
+
+/>
 
     <TextView
         android:id="@+id/emailTextView"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="48dp"
+        android:hint="Enter Email"
+        android:paddingHorizontal="10sp"
+        android:layout_gravity="center"
         android:background="@drawable/text_input_outline"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,32 +77,50 @@
         style="@style/TEXT"
         android:fontFamily="@font/helvetica_bold"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="10dp"
+/>
 
     <EditText
         android:id="@+id/newPasswordEditText"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="48dp"
-        android:background="@drawable/text_input_outline"
+        android:hint="Enter password"
         android:inputType="textPassword"
-        android:layout_marginBottom="24dp"/>
+        android:paddingLeft="10dp"
+        android:paddingRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/text_input_outline"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:importantForAccessibility="yes"/>
 
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="48dp"
-        android:text="Save Changes"
+        android:text="Save Profile"
         style="@style/BUTTON"
         app:cornerRadius="8dp"
         android:textColor="@color/white"
         android:layout_marginBottom="16dp"/>
 
     <Button
+        android:id="@+id/editButton"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:text="Edit Profile"
+        style="@style/GRYBUTTON"
+        app:cornerRadius="8dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
         android:id="@+id/logoutButton"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:text="Logout"
-        style="@style/BUTTON"
+        style="@style/REDBUTTON"
         app:cornerRadius="8dp"
         android:textColor="@color/white"/>
 </LinearLayout>
