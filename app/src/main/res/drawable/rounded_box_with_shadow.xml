@@ -3,7 +3,7 @@
     <!-- Box Layer -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#3D838383" /> <!-- Box background color -->
+            <solid android:color="#FFFFFF" /> <!-- Box background color -->
             <stroke android:color="@color/button_color" android:width="4dp"/>
             <corners android:radius="12dp" /> <!-- Rounded corners for the box -->
         </shape>
