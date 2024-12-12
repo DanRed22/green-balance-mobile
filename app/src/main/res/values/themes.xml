@@ -24,6 +24,11 @@
         <item name="android:backgroundTint">#1bc056</item>
     </style>
 
+    <style name="BUTTON2">
+        <item name="android:textColor">#E6E6E6</item>
+        <item name="android:backgroundTint">#188750</item>
+    </style>
+
     <style name="REDBUTTON">
         <item name="android:textColor">#E6E6E6</item>
         <item name="android:backgroundTint">#d42828</item>
